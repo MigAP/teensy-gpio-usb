@@ -26,6 +26,7 @@ Register Number | Register | Pin Number (physical)
 5 | C |13 
 6 | C |11 
 7 | C |12 
+--|---|--
 0 | D | 2 
 1 | D |14 
 2 | D | 7 
