@@ -13,7 +13,6 @@ Hostcomm_struct_t   Host_comm =   {
 uint8_t outpins[] = {2,14,7,8,6,20,21,5};     // Port D 
 uint8_t inpins[]  = {15,22,23,9,10,13,11,12}; // Port C
 
-char msg[200]; // Debug message 
 
 #define GPIO_NB 8 // Number of controlled GPIOs 
 
@@ -25,7 +24,6 @@ int GPIO_comm_update( void ) {
                       *ptout  = (uint8_t*)(&GPIO_comm);
   static int          ret;
   static int          in_cnt = 0;
-  int                 i; 
   
   ret = 0;
   
