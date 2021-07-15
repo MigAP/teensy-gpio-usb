@@ -16,24 +16,24 @@ reading.
 The relationship between the phyisical pins and register numbers is
 available on the Teensy schematic available in the `docs` directory.
 
- Register Number | Register | Pin Number (physical) 
------------------|----------|-----------------------
-               0 | C        |                    15 
-               1 | C        |                    22 
-               2 | C        |                    23 
-               3 | C        |                     9 
-               4 | C        |                    10 
-               5 | C        |                    13 
-               6 | C        |                    11 
-               7 | C        |                    12 
-               0 | D        |                     2 
-               1 | D        |                    14 
-               2 | D        |                     7 
-               3 | D        |                     8 
-               4 | D        |                     6 
-               5 | D        |                    20 
-               6 | D        |                    21 
-               7 | D        |                     5 
+Register Number | Register | Pin Number (physical) 
+----------------|----------|-----------------------
+0 | C |15 
+1 | C |22 
+2 | C |23 
+3 | C | 9 
+4 | C |10 
+5 | C |13 
+6 | C |11 
+7 | C |12 
+0 | D | 2 
+1 | D |14 
+2 | D | 7 
+3 | D | 8 
+4 | D | 6 
+5 | D |20 
+6 | D |21 
+7 | D | 5 
 
 ## Useful links 
 
