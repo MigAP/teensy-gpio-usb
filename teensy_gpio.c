@@ -1,3 +1,9 @@
+/*
+ *   GPIO read/write of teensy 3.5 
+ *   MigAP, July 2021
+ *   To compile : gcc -Wall -o teensy_gpio teensy_gpio.c
+ */
+
 #include <fcntl.h>
 #include <termios.h>
 #include <stdlib.h>
@@ -25,7 +31,6 @@
 #define HOST_BAUDRATE       B115200                 // Serial baudrate
 #define HOST_READ_TIMEOUT   5                       // Tenth of second
 #define HOST_NB_PING        500                     // Nb roundtrip communication
-//#define HOST_PERIOD         10000                 // Period of serial exchange (us)
 #define HOST_PERIOD         300000                  // Period of serial exchange (us)
 #define HOST_DEV_SERIALNB    5488750                // Serial number of the teensy
 #define HOST_DEV_SERIALLG     10                    // Max length of a serial number
@@ -40,9 +45,9 @@
 
 // Globals
 int  Host_fd = HOST_ERROR_FD;                // Serial port file descriptor
-char Host_devname[PATH_MAX] =""; // Serial port devname used to get fd with open 
+char Host_devname[PATH_MAX] ="";             // Serial port devname used to get fd with open 
 
-struct termios oldtio; // Backup of initial tty configuration
+struct termios oldtio;                       // Backup of initial tty configuration
 
 GPIOcomm_struct_t GPIO_comm; 
 Hostcomm_struct_t Host_comm; 
@@ -214,6 +219,7 @@ int Host_comm_update( uint32_t      serial_nb,
 
     // Timeout
     if ( elapsed_us / 100000 > HOST_READ_TIMEOUT ){
+      fprintf( stderr, "Communication timeout.\n" );
       break;
     }
     
