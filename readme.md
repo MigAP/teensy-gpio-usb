@@ -1,20 +1,20 @@
 # Teensy GPIO control over USB 
 
-This project allows to control a total of 16 GPIO by USB . It can
-simoutaneously read and write to 8 predifined Teensy GPIO using the
+This project allows to control a total of 16 GPIO by USB. It can
+simultaneously read and write up to 8 predefined Teensy GPIO using the
 low level GPIO Teensy registers:
 
-- `GPIOX_PDOR`: used to write. 
-- `GPIOX_PDIR`: used to read. 
+- `GPIOX_PDOR`: for writing the GPIO. 
+- `GPIOX_PDIR`: for reading the GPIO. 
 
 The current implementation uses the first 8 bits of the `GPIOD`
-resgister for writing, and the first 8 bits of the `GPIOC` for
+register for writing, and the first 8 bits of the `GPIOC` for
 reading.
 
 ## Map between the physical pins and register numbers 
 
-The relationship between the phyisical pins and register numbers is
-available on the Teensy schematic available in the `docs` directory.
+The relationship between the physical pins and register numbers is
+available on the Teensy schematic (see the `docs` directory).
 
 Register Number | Register | Pin Number (physical) 
 ----------------|----------|-----------------------
@@ -37,5 +37,5 @@ Register Number | Register | Pin Number (physical)
 
 ## Useful links 
 
-- Bitwise operations in C: https://www.pjrc.com/teensy/pins.html
-- Lowlevel register for I/O: https://forum.pjrc.com/archive/index.php/t-17532.html
+- Bit-wise operations in C: https://www.pjrc.com/teensy/pins.html
+- Low-level register for I/O: https://forum.pjrc.com/archive/index.php/t-17532.html
