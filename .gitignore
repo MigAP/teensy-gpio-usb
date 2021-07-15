@@ -1,0 +1,7 @@
+# Ignore Emacs backup files
+*~
+
+# Build objects files 
+*.o
+
+
